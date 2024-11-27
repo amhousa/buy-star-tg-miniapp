@@ -9,7 +9,7 @@ import {CreateJettonDemo} from "./components/CreateJettonDemo/CreateJettonDemo";
 function App() {
   return (
       <TonConnectUIProvider
-          manifestUrl="https://buyingtelegramstarsfast.vercel.com/tonconnect-manifest.json"
+          manifestUrl="https://demo-dapp-with-react-ui-6adq.vercel.app/tonconnect-manifest.json"
           uiPreferences={{ theme: THEME.DARK }}
           walletsListConfiguration={{
             includeWallets: [
