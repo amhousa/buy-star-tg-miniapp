@@ -1,5 +1,13 @@
 {
-  "url": "https://buyingtelegramstarsfast.vercel.com/",
+<<<<<<< HEAD
+  "url": "https://demo-dapp-with-react-ui-6adq.vercel.app/",
   "name": "Buying Stars",
   "iconUrl": "https://telegram.tips/wp-content/uploads/2022/07/TelegramPremium336.jpg",
+=======
+  "url": "https://BuyingStars_bot.github.io/",
+  "name": "BuyingStars_bot",
+  "iconUrl": "https://buyacc.shop/wp-content/uploads/2024/08/telegram-stars.webp",
+  "termsOfUseUrl": "https://ton-connect.github.io/demo-dapp-with-react-ui/terms-of-use.txt",
+  "privacyPolicyUrl": "https://ton-connect.github.io/demo-dapp-with-react-ui/privacy-policy.txt"
+>>>>>>> 403b78f03ebfaf1cede064542222e8e36328070b
 }

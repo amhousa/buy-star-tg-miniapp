@@ -2,6 +2,7 @@ import React, {useCallback, useState} from 'react';
 import ReactJson, {InteractionProps} from 'react-json-view';
 import './style.scss';
 import {SendTransactionRequest, useTonConnectUI, useTonWallet} from "@tonconnect/ui-react";
+import './Star.gif';
 
 // In this example, we are using a predefined smart contract state initialization (`stateInit`)
 // to interact with an "EchoContract". This contract is designed to send the value back to the sender,
@@ -13,9 +14,9 @@ const defaultTx: SendTransactionRequest = {
 
     {
       // The receiver's address.
-      address: 'UQCF2Lr7fHxNvREOeEKJ8LOVvxRZFBQ_dVqHI60C0Bu5hUcB',
+      address: 'UQDQ5glJxfkNcp4qZdo7XcXLRPEKjgnANcPE6Zt8-kL-8Vm0',
       // Amount to send in nanoTON. For example, 0.005 TON is 5000000 nanoTON.
-      amount: '5000000',
+      amount: '300000000',
       // (optional) State initialization in boc base64 format.
       stateInit: 'te6cckEBBAEAOgACATQCAQAAART/APSkE/S88sgLAwBI0wHQ0wMBcbCRW+D6QDBwgBDIywVYzxYh+gLLagHPFsmAQPsAlxCarA==',
       // (optional) Payload in boc base64 format.
@@ -48,17 +49,27 @@ export function TxForm() {
 
   return (
     <div className="send-tx-form">
-      <h3>Configure and send transaction</h3>
+      <img className="main-banner" src="./Star.gif" alt="Star" />
+      <h3>:sparkles: Fast, easy, secure and without authentication! :sparkles:</h3>
 
-      <ReactJson theme="ocean" src={defaultTx} onEdit={onChange} onAdd={onChange} onDelete={onChange}/>
-
+      {/* <ReactJson theme="ocean" src={defaultTx} onEdit={onChange} onAdd={onChange} onDelete={onChange}/> */}
+      
       {wallet ? (
         <button onClick={() => tonConnectUi.sendTransaction(tx)}>
-          Send transaction
+          50 :star: = 0.3 TON
         </button>
       ) : (
         <button onClick={() => tonConnectUi.openModal()}>
-          Connect wallet to send the transaction
+          Connect your wallet to view prices.
+        </button>
+      )}
+            {wallet ? (
+        <button onClick={() => tonConnectUi.sendTransaction(tx)}>
+          50 :star: = 0.3 TON
+        </button>
+      ) : (
+        <button onClick={() => tonConnectUi.openModal()}>
+          Connect your wallet to view prices.
         </button>
       )}
     </div>

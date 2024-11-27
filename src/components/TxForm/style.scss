@@ -9,7 +9,7 @@
 
   h3 {
     color: white;
-    opacity: 0.8;
+    opacity: 1;
     font-size: 28px;
   }
 
@@ -22,24 +22,31 @@
   }
 
   > button {
+    width: 200px;
+    height: 200px;
     border: none;
     padding: 7px 15px;
     border-radius: 15px;
-    cursor: pointer;
-
-    background-color: rgba(102,170,238,0.91);
+    background-color: #0098ea;
     color: white;
     font-size: 16px;
     line-height: 20px;
+    display: flex;
+    align-items: flex-end;
 
     transition: transform 0.1s ease-in-out;
 
     &:hover {
       transform: scale(1.03);
+      background-blend-mode: color-burn;
     }
 
     &:active {
       transform: scale(0.97);
     }
   }
+  .main-banner {
+    border-radius: 50%;
+  }
+
 }

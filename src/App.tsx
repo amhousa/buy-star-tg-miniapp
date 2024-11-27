@@ -9,7 +9,7 @@ import {CreateJettonDemo} from "./components/CreateJettonDemo/CreateJettonDemo";
 function App() {
   return (
       <TonConnectUIProvider
-          manifestUrl="https://demo-dapp-with-react-ui-6adq.vercel.app/tonconnect-manifest.json"
+          manifestUrl="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/public/tonconnect-manifest.json"
           uiPreferences={{ theme: THEME.DARK }}
           walletsListConfiguration={{
             includeWallets: [
@@ -143,9 +143,9 @@ function App() {
         <div className="app">
             <Header />
             <TxForm />
-            <CreateJettonDemo />
+            {/* <CreateJettonDemo />
             <TonProofDemo />
-            <Footer />
+            <Footer /> */}
         </div>
       </TonConnectUIProvider>
   )
