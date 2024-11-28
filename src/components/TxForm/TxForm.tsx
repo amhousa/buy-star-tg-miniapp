@@ -50,17 +50,27 @@ export function TxForm() {
     <div className="send-tx-form">
       <img className="main-banner" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/Star.webp" alt="Star" height="100px" />
       <h2>✨Fast, easy, secure and without authentication!✨</h2>
+
       {/* <ReactJson theme="ocean" src={defaultTx} onEdit={onChange} onAdd={onChange} onDelete={onChange}/> */}
+      
       {wallet ? (
         <button onClick={() => tonConnectUi.sendTransaction(tx)}>
-           50 :star: = 0.3 TON
+          ⭐️ 50 :star: = 0.3 TON
         </button>
       ) : (
         <button onClick={() => tonConnectUi.openModal()}>
-           50 :star: = 0.3 TON
+          ⭐️ Connect your wallet to view prices.
+        </button>
+      )}
+            {wallet ? (
+        <button onClick={() => tonConnectUi.sendTransaction(tx)}>
+          50 :star: = 0.3 TON
+        </button>
+      ) : (
+        <button onClick={() => tonConnectUi.openModal()}>
+          50 :star: = 0.3 TON
           </button>
       )}
     </div>
   );
 }
-
