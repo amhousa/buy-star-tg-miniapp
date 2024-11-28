@@ -49,8 +49,8 @@ export function TxForm() {
 
   return (
     <div className="send-tx-form">
-      <img className="main-banner" src="./Star.gif" alt="Star" />
-      <h3>:sparkles: Fast, easy, secure and without authentication! :sparkles:</h3>
+      <img className="main-banner" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/Star.gif" alt="Star" />
+      <h3>✨Fast, easy, secure and without authentication!✨</h3>
 
       {/* <ReactJson theme="ocean" src={defaultTx} onEdit={onChange} onAdd={onChange} onDelete={onChange}/> */}
       
