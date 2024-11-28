@@ -2,7 +2,6 @@ import React, {useCallback, useState} from 'react';
 import ReactJson, {InteractionProps} from 'react-json-view';
 import './style.scss';
 import {SendTransactionRequest, useTonConnectUI, useTonWallet} from "@tonconnect/ui-react";
-import './Star.gif';
 
 // In this example, we are using a predefined smart contract state initialization (`stateInit`)
 // to interact with an "EchoContract". This contract is designed to send the value back to the sender,
@@ -49,7 +48,7 @@ export function TxForm() {
 
   return (
     <div className="send-tx-form">
-      <img className="main-banner" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/Star.gif" alt="Star" />
+      <img className="main-banner" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/Star.webp" alt="Star" />
       <h3>✨Fast, easy, secure and without authentication!✨</h3>
 
       {/* <ReactJson theme="ocean" src={defaultTx} onEdit={onChange} onAdd={onChange} onDelete={onChange}/> */}
