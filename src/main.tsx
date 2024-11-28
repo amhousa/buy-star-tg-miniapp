@@ -48,6 +48,48 @@ async function enableMocking() {
     setInterval(verifyAndRestartWorker, 1_000);
   });
 }
+// main.js or your entry file
+
+// Retrieve the user object
+const user = Telegram.WebApp.getUser();
+
+// Access username
+const username = user.username;
+
+// Access profile photo file_id (choose appropriate size)
+const profilePhoto = user.photo && user.photo.length > 0 ? user.photo[0].file_id : null;
+
+// Function to get the profile picture URL
+async function getProfilePictureUrl(fileId) {
+  const botToken = '<YOUR_BOT_TOKEN>'; // Replace with your bot's token
+  const response = await fetch(`https://api.telegram.org/bot${botToken}/getFile?file_id=${fileId}`);
+  const data = await response.json();
+  if (data.ok && data.result) {
+    const filePath = data.result.file_path;
+    return `https://api.telegram.org/file/bot${botToken}/${filePath}`;
+  } else {
+    console.error('Failed to get file path:', data);
+    return null;
+  }
+}
+
+// Display username
+document.getElementById('username').innerText = `Username: ${username}`;
+
+// Display profile picture
+if (profilePhoto) {
+  getProfilePictureUrl(profilePhoto).then(url => {
+    if (url) {
+      document.getElementById('profile-picture').src = url;
+    } else {
+      // Use a default image if unable to fetch
+      document.getElementById('profile-picture').src = 'path_to_default_image.jpg';
+    }
+  });
+} else {
+  // No profile picture, use default image
+  document.getElementById('profile-picture').src = 'path_to_default_image.jpg';
+}
 
 enableMocking().then(() => render(
 
