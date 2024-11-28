@@ -65,8 +65,9 @@ const defaultTx2: SendTransactionRequest = {
 
 export function TxForm() {
 
-  const [tx, setTx] = useState(defaultTx,defaultTx2);
+  const [tx, setTx] = useState(defaultTx);
 // amhousa custom 2
+const [tx2, setTx] = useState(defaultTx2);
 
   const wallet = useTonWallet();
 
@@ -85,20 +86,20 @@ export function TxForm() {
       
       {wallet ? (
         <button onClick={() => tonConnectUi.sendTransaction(tx)}>
-          ⭐️ 50 :star: = 0.3 TON
+           50 :star: = 0.3 TON
         </button>
       ) : (
         <button onClick={() => tonConnectUi.openModal()}>
-          ⭐️ 50 :star: = 0.3 TON
+           50 :star: = 0.3 TON
           </button>
       )}
             {wallet ? (
         <button onClick={() => tonConnectUi.sendTransaction(tx2)}>
-          ⭐️ 150 :star: = 0.9 TON
+           150 :star: = 0.9 TON
           </button>
       ) : (
         <button onClick={() => tonConnectUi.openModal()}>
-          ⭐️ 150 :star: = 0.9 TON
+           150 :star: = 0.9 TON
           </button>
       )}
     </div>
