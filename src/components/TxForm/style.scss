@@ -11,6 +11,7 @@
     color: white;
     opacity: 1;
     font-size: 28px;
+    text-align: center;
   }
 
   > div:nth-child(2) {
@@ -22,11 +23,11 @@
   }
 
   > button {
-    width: 100px;
+    width: -webkit-fill-available;
     border: none;
     padding: 7px 15px;
     border-radius: 15px;
-    background-color: #0098ea;
+    background-color: #0098ea29;
     color: white;
     font-size: 16px;
     line-height: 20px;
@@ -42,8 +43,13 @@
 
     &:active {
       transform: scale(0.97);
+    } 
+
+    > span {
+      text-align: center;
     }
   }
+
   .main-banner {
     border-radius: 50%;
   }

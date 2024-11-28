@@ -23,13 +23,12 @@ const defaultTx: SendTransactionRequest = {
     },
 
     // Uncomment the following message to send two messages in one transaction.
-    /*
+
     {
       // Note: Funds sent to this address will not be returned back to the sender.
       address: 'UQAuz15H1ZHrZ_psVrAra7HealMIVeFq0wguqlmFno1f3B-m',
       amount: toNano('0.01').toString(),
     }
-    */
 
   ],
 };
@@ -50,19 +49,19 @@ export function TxForm() {
     <div className="send-tx-form">
       <img className="main-banner" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/Star.webp" alt="Star" height="100px" />
       <h2>✨Fast, easy, secure and without authentication!✨</h2>
-
+      <div className="box">
       {/* <ReactJson theme="ocean" src={defaultTx} onEdit={onChange} onAdd={onChange} onDelete={onChange}/> */}
       
       {wallet ? (
         <button onClick={() => tonConnectUi.sendTransaction(tx)}>
-          ⭐️ 50 :star: = 0.3 TON
+          <p>⭐️ 50 :star: = 0.3 TON</p>
         </button>
       ) : (
         <button onClick={() => tonConnectUi.openModal()}>
           ⭐️ Connect your wallet to view prices.
         </button>
       )}
-            {wallet ? (
+      {wallet ? (
         <button onClick={() => tonConnectUi.sendTransaction(tx)}>
           50 :star: = 0.3 TON
         </button>
@@ -71,6 +70,7 @@ export function TxForm() {
           50 :star: = 0.3 TON
           </button>
       )}
+      </div>
     </div>
   );
 }
