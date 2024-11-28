@@ -3,7 +3,7 @@ import './header.scss';
 
 export const Header = () => {
     return <header>
-        <span>Buy Star :star:</span>
+        <span>Buy Star ⭐️</span>
         <TonConnectButton />
     </header>
 }
