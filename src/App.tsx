@@ -5,8 +5,11 @@ import {TxForm} from "./components/TxForm/TxForm";
 import {Footer} from "./components/Footer/Footer";
 import {TonProofDemo} from "./components/TonProofDemo/TonProofDemo";
 import {CreateJettonDemo} from "./components/CreateJettonDemo/CreateJettonDemo";
+import UserProfile from './UserProfile';
 
 function App() {
+  const botToken = '7739269961:AAE5PWaOn7AyMm5G9KYv2APrbGo7Cof4Cxo';  // جایگزین کنید با توکن دسترسی خود
+  const userId = '6955963932';           // جایگزین کنید با شناسه کاربر
   return (
       <TonConnectUIProvider
           manifestUrl="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/public/tonconnect-manifest.json"
@@ -140,8 +143,11 @@ function App() {
               twaReturnUrl: 'https://t.me/amhousabot/not'
           }}
       >
+        
         <div className="app">
             <Header />
+            <h1>Telegram User Profile</h1>
+            <UserProfile botToken={botToken} userId={userId} />
             <TxForm />
             {/* <CreateJettonDemo />
             <TonProofDemo />
