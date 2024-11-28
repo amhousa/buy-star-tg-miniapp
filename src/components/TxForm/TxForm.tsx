@@ -67,7 +67,7 @@ export function TxForm() {
 
   const [tx, setTx] = useState(defaultTx);
 // amhousa custom 2
-const [tx2, setTx] = useState(defaultTx2);
+  const [tx2, setTx] = useState(defaultTx2);
 
   const wallet = useTonWallet();
 
