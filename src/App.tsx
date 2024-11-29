@@ -2,6 +2,7 @@ import './App.scss'
 import {THEME, TonConnectUIProvider} from "@tonconnect/ui-react";
 import {Header} from "./components/Header/Header";
 import {TxForm} from "./components/TxForm/TxForm";
+import {TxForm2} from "./components/TxForm2/TxForm2";
 import {Footer} from "./components/Footer/Footer";
 import {TonProofDemo} from "./components/TonProofDemo/TonProofDemo";
 import {CreateJettonDemo} from "./components/CreateJettonDemo/CreateJettonDemo";
@@ -149,6 +150,7 @@ function App() {
             {/* <h1>Telegram User Profile</h1>
             <UserProfile botToken={botToken} userId={userId} /> */}
             <TxForm />
+            <TxForm2 />
             {/* <CreateJettonDemo />
             <TonProofDemo />
             <Footer /> */}
