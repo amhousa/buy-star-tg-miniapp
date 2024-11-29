@@ -23,12 +23,19 @@ function App() {
     try {
       const response = await axios.get(`https://api.telegram.org/bot${botToken}/getChat`, {
         params: {
-          username,
+          chat_id: `@${username}`,
         },
       });
-      setResults([response.data.result]);
+
+      if (response.data.ok) {
+        setResults([response.data.result]);
+      } else {
+        console.error('No results found:', response.data);
+        setResults([]);
+      }
     } catch (error) {
       console.error('Error fetching search results:', error);
+      setResults([]);
     }
   };
 
@@ -55,10 +62,10 @@ function App() {
         ]
       }}
       actionsConfiguration={{
-        twaReturnUrl: 'https://t.me/amhousabot/not'
+        twaReturnUrl: 'https://t.me/buyingstars_bot'
       }}
     >
-      <div className="app">
+       <div className="app">
         <Header />
         <h1>Telegram User Profile</h1>
         <UserProfile botToken={botToken} userId={userId} />
