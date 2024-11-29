@@ -1,7 +1,6 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-// https://vitejs.dev/config/
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
@@ -11,13 +10,8 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'docs'
-  },
-  // @ts-ignore
-  base: process.env.GH_PAGES ? '/demo-dapp-with-react-ui/' : './',
-  server: {
-    fs: {
-      allow: ['../sdk', './'],
+    rollupOptions: {
+      external: ['@/lib/utils'],
     },
   },
-})
+});
