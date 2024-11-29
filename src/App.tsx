@@ -1,160 +1,84 @@
-import './App.scss'
-import {THEME, TonConnectUIProvider} from "@tonconnect/ui-react";
-import {Header} from "./components/Header/Header";
-import {TxForm} from "./components/TxForm/TxForm";
-import {Footer} from "./components/Footer/Footer";
-import {TonProofDemo} from "./components/TonProofDemo/TonProofDemo";
-import {CreateJettonDemo} from "./components/CreateJettonDemo/CreateJettonDemo";
+// src/App.tsx
+import './App.scss';
+import { THEME, TonConnectUIProvider } from "@tonconnect/ui-react";
+import { Header } from "./components/Header/Header";
+import { TxForm } from "./components/TxForm/TxForm";
+import { Footer } from "./components/Footer/Footer";
+import { TonProofDemo } from "./components/TonProofDemo/TonProofDemo";
+import { CreateJettonDemo } from "./components/CreateJettonDemo/CreateJettonDemo";
 import UserProfile from './UserProfile';
+import SearchForm from './SearchForm';
+import SearchResults from './SearchResults';
+import axios from 'axios';
+import React, { useState } from 'react';
 
 function App() {
-  const botToken = '7739269961:AAE5PWaOn7AyMm5G9KYv2APrbGo7Cof4Cxo';  // جایگزین کنید با توکن دسترسی خود
-  const userId = '6955963932';           // جایگزین کنید با شناسه کاربر
+  const botToken = '7739269961:AAE5PWaOn7AyMm5G9KYv2APrbGo7Cof4Cxo'; // جایگزین کنید با توکن دسترسی خود
+  const userId = '6955963932'; // جایگزین کنید با شناسه کاربر
+
+  const [results, setResults] = useState<any[]>([]);
+  const [selectedUser, setSelectedUser] = useState<any | null>(null);
+
+  const handleSearch = async (username: string) => {
+    try {
+      const response = await axios.get(`https://api.telegram.org/bot${botToken}/getChat`, {
+        params: {
+          username,
+        },
+      });
+      setResults([response.data.result]);
+    } catch (error) {
+      console.error('Error fetching search results:', error);
+    }
+  };
+
+  const handleSelect = (user: any) => {
+    setSelectedUser(user);
+  };
+
   return (
-      <TonConnectUIProvider
-          manifestUrl="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/public/tonconnect-manifest.json"
-          uiPreferences={{ theme: THEME.DARK }}
-          walletsListConfiguration={{
-            includeWallets: [
-              {
-                appName: "telegram-wallet",
-                name: "Wallet",
-                imageUrl: "https://wallet.tg/images/logo-288.png",
-                aboutUrl: "https://wallet.tg/",
-                universalLink: "https://t.me/wallet?attach=wallet",
-                bridgeUrl: "https://bridge.ton.space/bridge",
-                platforms: ["ios", "android", "macos", "windows", "linux"]
-              },
-              {
-                appName: "tonwallet",
-                name: "TON Wallet",
-                imageUrl: "https://wallet.ton.org/assets/ui/qr-logo.png",
-                aboutUrl: "https://chrome.google.com/webstore/detail/ton-wallet/nphplpgoakhhjchkkhmiggakijnkhfnd",
-                universalLink: "https://wallet.ton.org/ton-connect",
-                jsBridgeKey: "tonwallet",
-                bridgeUrl: "https://bridge.tonapi.io/bridge",
-                platforms: ["chrome", "android"]
-              },
-              {
-                appName: "nicegramWallet",
-                name: "Nicegram Wallet",
-                imageUrl: "https://static.nicegram.app/icon.png",
-                aboutUrl: "https://nicegram.app",
-                universalLink: "https://nicegram.app/tc",
-                deepLink: "nicegram-tc://",
-                jsBridgeKey: "nicegramWallet",
-                bridgeUrl: "https://bridge.tonapi.io/bridge",
-                platforms: ["ios", "android"]
-              },
-              {
-                appName: "tokenpocket",
-                name: "TokenPocket",
-                imageUrl: "https://hk.tpstatic.net/logo/tokenpocket.png",
-                aboutUrl: "https://tokenpocket.pro",
-                jsBridgeKey: "tokenpocket",
-                platforms: ["ios", "android"]
-              },
-              {
-                appName: "dewallet",
-                name: "DeWallet",
-                imageUrl: "https://raw.githubusercontent.com/delab-team/manifests-images/main/WalletAvatar.png",
-                aboutUrl: "https://delabwallet.com",
-                universalLink: "https://t.me/dewallet?attach=wallet",
-                bridgeUrl: "https://bridge.dewallet.pro/bridge",
-                platforms: ["ios", "android", "macos", "windows", "linux"]
-              },
-              {
-                appName: "cdcTonWallet",
-                name: "Crypto.com DeFi Wallet",
-                imageUrl: "https://apro-ncw-api-file.crypto.com/wallet/logo",
-                aboutUrl: "https://crypto.com/defi-wallet",
-                universalLink: "https://wallet.crypto.com/deeplink/ton-connect",
-                deepLink: "dfw://",
-                jsBridgeKey: "cdcTonWallet",
-                bridgeUrl: "https://wallet.crypto.com/sse/tonbridge",
-                platforms: ["ios", "android", "chrome"]
-              },
-              {
-                appName: "tobi",
-                name: "Tobi",
-                imageUrl: "https://app.tobiwallet.app/icons/logo.png",
-                aboutUrl: "https://tobi.fun",
-                universalLink: "https://t.me/TobiCopilotBot?attach=wallet",
-                bridgeUrl: "https://ton-bridge.tobiwallet.app/bridge",
-                platforms: ["ios", "android", "macos", "windows", "linux"]
-              },
-              {
-                appName: "trustwalletTon",
-                name: "Trust",
-                imageUrl: "https://assets-cdn.trustwallet.com/dapps/trust.logo.png",
-                aboutUrl: "https://trustwallet.com/about-us",
-                bridgeUrl: "https://tonconnect.trustwallet.com/bridge",
-                jsBridgeKey: "trustwalletTon",
-                platforms: ["chrome", "ios", "android"]
-              },
-              {
-                appName: "bitgetWalletLite",
-                name: "Bitget Wallet Lite",
-                imageUrl: "https://raw.githubusercontent.com/bitgetwallet/download/main/logo/png/bitget_wallet_lite_logo.png",
-                aboutUrl: "https://web3.bitget.com",
-                universalLink: "https://t.me/BitgetWallet_TGBot?attach=wallet",
-                bridgeUrl: "https://ton-connect-bridge.bgwapi.io/bridge",
-                platforms: ["ios", "android", "macos", "windows", "linux"]
-              },
-              {
-                appName: "onekey",
-                name: "OneKey",
-                imageUrl: "https://common.onekey-asset.com/logo/onekey-x288.png",
-                aboutUrl: "https://onekey.so",
-                jsBridgeKey: "onekeyTonWallet",
-                platforms: ["chrome"]
-              },
-              {
-                appName: "tomoWallet",
-                name: "Tomo Wallet",
-                imageUrl: "https://pub.tomo.inc/logo.png",
-                aboutUrl: "https://www.tomo.inc/",
-                universalLink: "https://t.me/tomowalletbot?attach=wallet",
-                bridgeUrl: "https://go-bridge.tomo.inc/bridge",
-                platforms: ["ios", "android", "macos", "windows", "linux"]
-              },
-              {
-                appName: "hpyTonWallet",
-                name: "HyperPay Wallet",
-                imageUrl: "https://hyperpay-website.oss-cn-hongkong.aliyuncs.com/static/dist/images/2022-12-30/logo.png",
-                aboutUrl: "https://www.hyperpay.tech",
-                universalLink: "https://www.hyperpay.tech/download&deeplink=hyperpay://web3/wallet/tonconnect",
-                jsBridgeKey: "hpyTonWallet",
-                bridgeUrl: "https://bridge.tonapi.io/bridge",
-                platforms: ["ios", "android", "macos", "windows", "linux"]
-              },
-              {
-                appName: "unstoppable",
-                name: "Unstoppable Wallet",
-                imageUrl: "https://unstoppable.money/logo288.png",
-                aboutUrl: "https://unstoppable.money/",
-                universalLink: "https://unstoppable.money/ton-connect.html",
-                bridgeUrl: "https://bridge.unstoppable.money/bridge",
-                platforms: ["ios", "android", "macos", "windows", "linux"]
-              }
-            ]
-          }}
-          actionsConfiguration={{
-              twaReturnUrl: 'https://t.me/amhousabot/not'
-          }}
-      >
-        
-        <div className="app">
-            <Header />
-            <h1>Telegram User Profile</h1>
-            <UserProfile botToken={botToken} userId={userId} />
-            <TxForm />
-            {/* <CreateJettonDemo />
-            <TonProofDemo />
-            <Footer /> */}
-        </div>
-      </TonConnectUIProvider>
-  )
+    <TonConnectUIProvider
+      manifestUrl="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/public/tonconnect-manifest.json"
+      uiPreferences={{ theme: THEME.DARK }}
+      walletsListConfiguration={{
+        includeWallets: [
+          {
+            appName: "telegram-wallet",
+            name: "Wallet",
+            imageUrl: "https://wallet.tg/images/logo-288.png",
+            aboutUrl: "https://wallet.tg/",
+            universalLink: "https://t.me/wallet?attach=wallet",
+            bridgeUrl: "https://bridge.ton.space/bridge",
+            platforms: ["ios", "android", "macos", "windows", "linux"]
+          },
+          // سایر کیف‌پول‌ها
+        ]
+      }}
+      actionsConfiguration={{
+        twaReturnUrl: 'https://t.me/amhousabot/not'
+      }}
+    >
+      <div className="app">
+        <Header />
+        <h1>Telegram User Profile</h1>
+        <UserProfile botToken={botToken} userId={userId} />
+        <SearchForm onSearch={handleSearch} />
+        {results.length > 0 && <SearchResults results={results} onSelect={handleSelect} />}
+        {selectedUser && (
+          <div>
+            <h2>Selected User</h2>
+            <img src={selectedUser.photo_url} alt={selectedUser.username} />
+            <p>{selectedUser.first_name} {selectedUser.last_name}</p>
+            <p>@{selectedUser.username}</p>
+          </div>
+        )}
+        <TxForm />
+        {/* <CreateJettonDemo /> */}
+        {/* <TonProofDemo /> */}
+        {/* <Footer /> */}
+      </div>
+    </TonConnectUIProvider>
+  );
 }
 
-export default App
+export default App;
