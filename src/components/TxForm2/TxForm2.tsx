@@ -46,7 +46,7 @@ export function TxForm2() {
   }, []);
 
   return (
-    <div className="send-tx-form">
+    <div>
 
 
       {/*  <ReactJson theme="ocean" src={defaultTx} onEdit={onChange} onAdd={onChange} onDelete={onChange}/> */}
