@@ -55,10 +55,6 @@ export function TxForm() {
       <label className="checkbox">
         <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe" /> Remember me
       </label>
-    </form>
-
-      {/* <ReactJson theme="ocean" src={defaultTx} onEdit={onChange} onAdd={onChange} onDelete={onChange}/> */}
-      
       {wallet ? (
         <button onClick={() => tonConnectUi.sendTransaction(tx)}>
           ⭐️ 50 :star: = 0.3 TON
@@ -68,6 +64,11 @@ export function TxForm() {
           ⭐️ Connect your wallet to view prices.
         </button>
       )}
+    </form>
+
+      {/* <ReactJson theme="ocean" src={defaultTx} onEdit={onChange} onAdd={onChange} onDelete={onChange}/> */}
+      
+
             {wallet ? (
         <button onClick={() => tonConnectUi.sendTransaction(tx)}>
           50 :star: = 0.3 TON
