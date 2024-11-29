@@ -2,6 +2,7 @@ import React, {useCallback, useState} from 'react';
 import ReactJson, {InteractionProps} from 'react-json-view';
 import './style.scss';
 import {SendTransactionRequest, useTonConnectUI, useTonWallet} from "@tonconnect/ui-react";
+import { TxForm2 } from '../TxForm2/TxForm2';
 
 // In this example, we are using a predefined smart contract state initialization (`stateInit`)
 // to interact with an "EchoContract". This contract is designed to send the value back to the sender,
@@ -67,6 +68,8 @@ export function TxForm() {
           </button>
       )}
       
+        <TxForm2 />
+
     </div>
   );
 }
