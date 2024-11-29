@@ -46,7 +46,7 @@ export function TxForm2() {
   }, []);
 
   return (
-    <div className="send-tx-form">
+    <div className="send-tx-form2">
 
 
       {/*  <ReactJson theme="ocean" src={defaultTx} onEdit={onChange} onAdd={onChange} onDelete={onChange}/> */}
@@ -58,7 +58,7 @@ export function TxForm2() {
         </button>
       ) : (
         <button onClick={() => tonConnectUi.openModal()}>
-          <p className="text-star">💫150          0.9 Ton</p>
+          <p className="text-star">💫150</p><p className="text-star">0.9 Ton</p>
           </button>
       )}
       
