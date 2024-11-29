@@ -48,10 +48,10 @@ export function TxForm() {
   return (
     <div className="send-tx-form">
       <img className="main-banner" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/Star.webp" alt="Star" height="100px" />
-      <h2>✨Fast, easy, secure and without authenticationh!✨</h2>
+      <h3>✨Fast, easy, secure and without authenticationh!✨</h3>
 
       <form className="form-signin">       
-        <input type="text" name="username" placeholder="Enter Telegram username..." required="" autofocus="" />
+        <input type="text" name="username" className="form-control" placeholder="Enter Telegram username..." required="" autofocus="" />
       </form>
 
       {/*  <ReactJson theme="ocean" src={defaultTx} onEdit={onChange} onAdd={onChange} onDelete={onChange}/> */}
@@ -59,7 +59,7 @@ export function TxForm() {
 
             {wallet ? (
         <button onClick={() => tonConnectUi.sendTransaction(tx)}>
-          <p className="text-star">💫50          0.3 Ton</p>
+          <p className="text-star">💫50</p><p className="text-star">0.3 Ton</p>
         </button>
       ) : (
         <button onClick={() => tonConnectUi.openModal()}>
