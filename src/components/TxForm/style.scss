@@ -33,9 +33,7 @@
     line-height: 20px;
     display: flex;
     align-items: flex-end;
-
     transition: transform 0.1s ease-in-out;
-
     &:active {
       transform: scale(1);
     }
@@ -56,18 +54,13 @@
     line-height: 20px;
     display: flex;
     align-items: flex-end;
-
     transition: transform 0.1s ease-in-out;
-
-  &:focus {
-    z-index: 2;
-  }
-
   }
 
 	.form-control {
     width: -webkit-fill-available;
     border: none;
+    color: white;
     padding: 7px 15px;
     border-radius: 15px;
     mix-blend-mode: color-dodge;
@@ -76,9 +69,7 @@
     line-height: 20px;
     display: flex;
     align-items: center;
-
     transition: transform 0.1s ease-in-out;
-
 	}
 
   .text-star {
