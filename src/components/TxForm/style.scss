@@ -68,25 +68,13 @@
       transform: scale(1.03);
       background-blend-mode: color-burn;
   }
+  &:focus {
+    z-index: 2;
+  }
 
-	.form-control {
-    width: -webkit-fill-available;
-    border: none;
-    padding: 7px 15px;
-    border-radius: 15px;
-    background-color: #0098ea29;
-    color: white;
-    font-size: 16px;
-    line-height: 20px;
-    display: flex;
-    align-items: flex-end;
+  }
+  .text-star {
+    text-align: justify;
+  }
 
-    transition: transform 0.1s ease-in-out;
-
-		&:focus {
-		  z-index: 2;
-		}
-	}
-
-}
 }

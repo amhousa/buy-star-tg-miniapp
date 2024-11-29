@@ -51,7 +51,7 @@ export function TxForm() {
       <h2>✨Fast, easy, secure and without authenticationh!✨</h2>
 
       <form className="form-signin">       
-        <input type="text" class="form-control" name="username" placeholder="Enter Telegram username..." required="" autofocus="" />
+        <input type="text" name="username" placeholder="Enter Telegram username..." required="" autofocus="" />
       </form>
 
       {/*  <ReactJson theme="ocean" src={defaultTx} onEdit={onChange} onAdd={onChange} onDelete={onChange}/> */}
@@ -59,11 +59,11 @@ export function TxForm() {
 
             {wallet ? (
         <button onClick={() => tonConnectUi.sendTransaction(tx)}>
-          <p>💫50          0.3 Ton</p>
+          <p className="text-star">💫50          0.3 Ton</p>
         </button>
       ) : (
         <button onClick={() => tonConnectUi.openModal()}>
-          💫50          0.3 Ton
+          <p className="text-star">💫50          0.3 Ton</p>
           </button>
       )}
       
