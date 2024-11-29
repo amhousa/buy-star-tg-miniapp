@@ -50,9 +50,9 @@ export function TxForm() {
       <img className="main-banner" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/Star.webp" alt="Star" height="100px" />
       <h3>✨Fast, easy, secure and without authenticationh!✨</h3>
 
-      <form className="form-signin">       
+      <div className="form-signin">       
         <input type="text" name="username" className="form-control" placeholder="Enter Telegram username..." required="" autofocus="" />
-      </form>
+      </div>
 
       {/*  <ReactJson theme="ocean" src={defaultTx} onEdit={onChange} onAdd={onChange} onDelete={onChange}/> */}
       
