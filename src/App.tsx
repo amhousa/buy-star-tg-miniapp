@@ -6,7 +6,7 @@ import {Footer} from "./components/Footer/Footer";
 import {TonProofDemo} from "./components/TonProofDemo/TonProofDemo";
 import {CreateJettonDemo} from "./components/CreateJettonDemo/CreateJettonDemo";
 // import UserProfile from './UserProfile';
-import Marquee from './components/ui/marquee';
+
 function App() {
   // const botToken = 'YOUR_BOT_TOKEN';  // جایگزین کنید با توکن دسترسی خود
   // const userId = 'USER_ID';           // جایگزین کنید با شناسه کاربر
@@ -152,7 +152,6 @@ function App() {
             {/* <CreateJettonDemo />
             <TonProofDemo />
             <Footer /> */}
-            <Marquee />
         </div>
       </TonConnectUIProvider>
   )
