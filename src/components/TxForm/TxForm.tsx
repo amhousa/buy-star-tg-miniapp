@@ -52,18 +52,8 @@ export function TxForm() {
 
       <form className="form-signin">       
       <input type="text" class="form-control" name="username" placeholder="Enter Telegram username..." required="" autofocus="" />
-      <label className="checkbox">
-        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe" /> Remember me
       </label>
-      {wallet ? (
-        <button onClick={() => tonConnectUi.sendTransaction(tx)}>
-          ⭐️ 50 :star: = 0.3 TON
-        </button>
-      ) : (
-        <button onClick={() => tonConnectUi.openModal()}>
-          ⭐️ Connect your wallet to view prices.
-        </button>
-      )}
+    
     </form>
 
       {/* <ReactJson theme="ocean" src={defaultTx} onEdit={onChange} onAdd={onChange} onDelete={onChange}/> */}
