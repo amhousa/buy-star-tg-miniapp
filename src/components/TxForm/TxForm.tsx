@@ -59,11 +59,11 @@ export function TxForm() {
 
             {wallet ? (
         <button onClick={() => tonConnectUi.sendTransaction(tx)}>
-          50 :star: = 0.3 TON
+          <p>💫50          0.3 Ton</p>
         </button>
       ) : (
         <button onClick={() => tonConnectUi.openModal()}>
-          500 :star: = 0.3 TON
+          💫50          0.3 Ton
           </button>
       )}
       
