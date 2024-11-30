@@ -45,7 +45,7 @@ const config = {
     // tabFocus: true
 };
 
-export default function FAQ {
+export default function FAQ() {
 
     return (
         <div>
