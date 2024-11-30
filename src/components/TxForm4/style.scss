@@ -1,0 +1,97 @@
+.send-tx-form2 {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+  h3 {
+    color: white;
+    opacity: 1;
+    text-align: center;
+  }
+
+  > div:nth-child(2) {
+    width: 100%;
+
+    span {
+      word-break: break-word;
+    }
+  }
+
+  > button {
+    width: -webkit-fill-available;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 15px;
+    background-color: #0098ea29;
+    color: white;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: inherit;
+    transition: transform 0.1s ease-in-out;
+    &:active {
+      transform: scale(1);
+    }
+  }
+  .image-left{
+    display: flex;
+    border-radius: 50%;
+    padding: 5px;
+    width: 40px;
+    margin-left: auto;
+  }
+  .image-right{
+    display: flex;
+    border-radius: 50%;
+    padding: 5px;
+    width: 40px;
+    margin-right: auto;
+  }
+  .main-banner {
+    border-radius: 50%;
+  }
+
+  .form-signin {
+    width: -webkit-fill-available;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 15px;
+    background-color: #0098ea29;
+    color: white;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: flex-end;
+    transition: transform 0.1s ease-in-out;
+  }
+
+	.form-control {
+    width: -webkit-fill-available;
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 15px;
+    mix-blend-mode: color-dodge;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.1s ease-in-out;
+	}
+
+  .text-star {
+    text-align: justify;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  .price-left{
+    padding-right: 20%;
+  }
+  .price-right{
+    padding-left: 20%;
+  }
+}
