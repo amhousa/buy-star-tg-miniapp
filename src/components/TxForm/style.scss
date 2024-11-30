@@ -32,13 +32,26 @@
     font-size: 16px;
     line-height: 20px;
     display: flex;
-    align-items: flex-end;
+    align-items: inherit;
     transition: transform 0.1s ease-in-out;
     &:active {
       transform: scale(1);
     }
   }
-
+  .image-left{
+    display: flex;
+    border-radius: inherit;
+    padding: 5px;
+    width: 40px;
+    margin-left: auto;
+  }
+  .image-right{
+    display: flex;
+    border-radius: inherit;
+    padding: 5px;
+    width: 40px;
+    margin-right: auto;
+  }
   .main-banner {
     border-radius: 50%;
   }
