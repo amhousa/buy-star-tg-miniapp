@@ -54,11 +54,11 @@ export function TxForm2() {
 
             {wallet ? (
         <button onClick={() => tonConnectUi.sendTransaction(tx)}>
-          <p className="text-star">💫150</p><p className="text-star">0.9 Ton</p>
-        </button>
+          <img className="image-left" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/StarPrice.gif" alt="star" /><p className="price-left">150</p><p className="price-right">0.9</p><img className="image-right" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/Ton.svg" alt="ton" />
+          </button>
       ) : (
         <button onClick={() => tonConnectUi.openModal()}>
-          <p className="text-star">💫150</p><p className="text-star">0.9 Ton</p>
+          <img className="image-left" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/StarPrice.gif" alt="star" /><p className="price-left">150</p><p className="price-right">0.9</p><img className="image-right" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/Ton.svg" alt="ton" />
           </button>
       )}
       
