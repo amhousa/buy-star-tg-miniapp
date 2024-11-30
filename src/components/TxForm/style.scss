@@ -40,14 +40,14 @@
   }
   .image-left{
     display: flex;
-    border-radius: inherit;
+    border-radius: 50%;
     padding: 5px;
     width: 40px;
     margin-left: auto;
   }
   .image-right{
     display: flex;
-    border-radius: inherit;
+    border-radius: 50%;
     padding: 5px;
     width: 40px;
     margin-right: auto;
@@ -91,9 +91,9 @@
     padding-right: 20%;
   }
   .price-left{
-    padding-right: 25%;
+    padding-right: 20%;
   }
   .price-right{
-    padding-left: 25%;
+    padding-left: 20%;
   }
 }
