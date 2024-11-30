@@ -32,17 +32,17 @@ const data = {
 };
 
 const styles = {
-    // bgColor: 'white',
+    bgColor: 'white',
     titleTextColor: "blue",
     rowTitleColor: "blue",
-    // rowContentColor: 'grey',
-    // arrowColor: "red",
+    rowContentColor: 'grey',
+    arrowColor: "red",
 };
 
 const config = {
-    // animate: true,
-    // arrowIcon: "V",
-    // tabFocus: true
+    animate: true,
+    arrowIcon: "V",
+    tabFocus: true
 };
 
 export default function FAQ() {
