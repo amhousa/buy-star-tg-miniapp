@@ -7,6 +7,7 @@ import {TonProofDemo} from "./components/TonProofDemo/TonProofDemo";
 import {CreateJettonDemo} from "./components/CreateJettonDemo/CreateJettonDemo";
 import FAQ from './FAQ';
 // import UserProfile from './UserProfile';
+import PreLoader1 from './PreLoader1';
 
 function App() {
   // const botToken = 'YOUR_BOT_TOKEN';  // جایگزین کنید با توکن دسترسی خود
@@ -146,6 +147,7 @@ function App() {
       >
         
         <div className="app">
+            <PreLoader1 />
             <Header />
             {/* <h1>Telegram User Profile</h1>
             <UserProfile botToken={botToken} userId={userId} /> */}
