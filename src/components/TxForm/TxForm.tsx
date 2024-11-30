@@ -60,11 +60,11 @@ export function TxForm() {
 
             {wallet ? (
         <button onClick={() => tonConnectUi.sendTransaction(tx)}>
-          <img className="image-left" src="https://digiseller.mycdn.ink/preview/1137868/p1_4625492_4c095473.gif" alt="star" /><p className="price-left">50</p><p className="price-right">0.3 Ton</p><img className="image-right" src="https://ton.org/download/ton_symbol.svg" alt="ton" />
+          <img className="image-left" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/StarPrice.gif" alt="star" /><p className="price-left">50</p><p className="price-right">0.3 Ton</p><img className="image-right" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/Ton.svg" alt="ton" />
           </button>
       ) : (
         <button onClick={() => tonConnectUi.openModal()}>
-          <img className="image-left" src="https://digiseller.mycdn.ink/preview/1137868/p1_4625492_4c095473.gif" alt="star" /><p className="price-left">50</p><p className="price-right">0.3 Ton</p><img className="image-right" src="https://ton.org/download/ton_symbol.svg" alt="ton" />
+          <img className="image-left" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/StarPrice.gif" alt="star" /><p className="price-left">50</p><p className="price-right">0.3 Ton</p><img className="image-right" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/Ton.svg" alt="ton" />
           </button>
       )}
       
