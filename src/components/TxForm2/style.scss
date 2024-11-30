@@ -1,4 +1,4 @@
-.send-tx-form2 {
+.send-tx-form {
   flex: 1;
   display: flex;
   width: 100%;
@@ -9,7 +9,6 @@
   h3 {
     color: white;
     opacity: 1;
-    font-size: 28px;
     text-align: center;
   }
 
@@ -37,7 +36,20 @@
       transform: scale(1);
     }
   }
-
+  .image-left{
+    display: flex;
+    border-radius: 50%;
+    padding: 5px;
+    width: 40px;
+    margin-left: auto;
+  }
+  .image-right{
+    display: flex;
+    border-radius: 50%;
+    padding: 5px;
+    width: 40px;
+    margin-right: auto;
+  }
   .main-banner {
     border-radius: 50%;
   }
@@ -76,5 +88,10 @@
     padding-left: 20%;
     padding-right: 20%;
   }
-
+  .price-left{
+    padding-right: 20%;
+  }
+  .price-right{
+    padding-left: 20%;
+  }
 }

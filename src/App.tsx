@@ -153,7 +153,7 @@ function App() {
             {/* <CreateJettonDemo />
             <TonProofDemo />
             <Footer /> */}
-            <FAQ />
+            {/* <FAQ /> */}
         </div>
       </TonConnectUIProvider>
   )
