@@ -64,7 +64,7 @@ export function TxForm() {
         </button>
       ) : (
         <button onClick={() => tonConnectUi.openModal()}>
-          <p className="text-star">💫50          0.3 Ton</p>
+          <p className="text-star">💫50</p><p className="text-star">0.3 Ton</p>
           </button>
       )}
       
