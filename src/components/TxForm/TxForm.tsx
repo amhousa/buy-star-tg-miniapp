@@ -64,7 +64,7 @@ export function TxForm() {
         </button>
       ) : (
         <button onClick={() => tonConnectUi.openModal()}>
-          <img className="image-left" src="https://assets.coingecko.com/coins/images/52184/standard/major_logo.png?1732694091" alt="star" /><p>50</p><p>0.3 Ton</p><img className="image-right" src="https://assets.coingecko.com/coins/images/17980/standard/photo_2024-09-10_17.09.00.jpeg?1725963446" alt="ton" />
+          <img className="image-left" src="https://assets.coingecko.com/coins/images/52184/standard/major_logo.png?1732694091" alt="star" /><p className="price-left">50</p><p className="price-right">0.3 Ton</p><img className="image-right" src="https://assets.coingecko.com/coins/images/17980/standard/photo_2024-09-10_17.09.00.jpeg?1725963446" alt="ton" />
           </button>
       )}
       
