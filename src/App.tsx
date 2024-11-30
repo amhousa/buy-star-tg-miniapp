@@ -5,6 +5,7 @@ import {TxForm} from "./components/TxForm/TxForm";
 import {Footer} from "./components/Footer/Footer";
 import {TonProofDemo} from "./components/TonProofDemo/TonProofDemo";
 import {CreateJettonDemo} from "./components/CreateJettonDemo/CreateJettonDemo";
+import FAQ from './FAQ';
 // import UserProfile from './UserProfile';
 
 function App() {
@@ -152,6 +153,7 @@ function App() {
             {/* <CreateJettonDemo />
             <TonProofDemo />
             <Footer /> */}
+            <FAQ />
         </div>
       </TonConnectUIProvider>
   )
