@@ -4,6 +4,9 @@ import './style.scss';
 import {SendTransactionRequest, useTonConnectUI, useTonWallet} from "@tonconnect/ui-react";
 import { TxForm2 } from '../TxForm2/TxForm2';
 import { TxForm3 } from '../TxForm3/TxForm3';
+import { TxForm4 } from '../TxForm4/TxForm4';
+import { TxForm5 } from '../TxForm5/TxForm5';
+
 
 // In this example, we are using a predefined smart contract state initialization (`stateInit`)
 // to interact with an "EchoContract". This contract is designed to send the value back to the sender,
@@ -71,6 +74,9 @@ export function TxForm() {
       
         <TxForm2 />
         <TxForm3 />
+        <TxForm4 />
+        <TxForm5 />
+
 
     </div>
   );

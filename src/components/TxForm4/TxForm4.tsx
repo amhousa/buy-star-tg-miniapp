@@ -15,7 +15,7 @@ const defaultTx: SendTransactionRequest = {
       // The receiver's address.
       address: 'UQDQ5glJxfkNcp4qZdo7XcXLRPEKjgnANcPE6Zt8-kL-8Vm0',
       // Amount to send in nanoTON. For example, 0.005 TON is 5000000 nanoTON.
-      amount: '900000000',
+      amount: '3600000000',
       // (optional) State initialization in boc base64 format.
       stateInit: 'te6cckEBBAEAOgACATQCAQAAART/APSkE/S88sgLAwBI0wHQ0wMBcbCRW+D6QDBwgBDIywVYzxYh+gLLagHPFsmAQPsAlxCarA==',
       // (optional) Payload in boc base64 format.
@@ -33,7 +33,7 @@ const defaultTx: SendTransactionRequest = {
   ],
 };
 
-export function TxForm2() {
+export function TxForm4() {
 
   const [tx, setTx] = useState(defaultTx);
 
@@ -54,11 +54,11 @@ export function TxForm2() {
 
             {wallet ? (
         <button onClick={() => tonConnectUi.sendTransaction(tx)}>
-          <img className="image-left" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/StarPrice.gif" alt="star" /><p className="price-left">150</p><p className="price-right">0.9</p><img className="image-right" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/Ton.svg" alt="ton" />
+          <img className="image-left" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/StarPrice.gif" alt="star" /><p className="price-left">600</p><p className="price-right">3.6</p><img className="image-right" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/Ton.svg" alt="ton" />
           </button>
       ) : (
         <button onClick={() => tonConnectUi.openModal()}>
-          <img className="image-left" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/StarPrice.gif" alt="star" /><p className="price-left">150</p><p className="price-right">0.9</p><img className="image-right" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/Ton.svg" alt="ton" />
+          <img className="image-left" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/StarPrice.gif" alt="star" /><p className="price-left">600</p><p className="price-right">3.6</p><img className="image-right" src="https://raw.githubusercontent.com/amhousa/demo-dapp-with-react-ui/refs/heads/master/src/components/TxForm/Ton.svg" alt="ton" />
           </button>
       )}
       
